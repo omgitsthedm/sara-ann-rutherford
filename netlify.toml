@@ -1,0 +1,17 @@
+[build]
+  publish = "."
+
+[[redirects]]
+  from = "/collections"
+  to = "/collections/framed-originals.html"
+  status = 301
+
+[[redirects]]
+  from = "/exhibitions"
+  to = "/exhibitions.html"
+  status = 301
+
+[[redirects]]
+  from = "/contact"
+  to = "/contact.html"
+  status = 301
