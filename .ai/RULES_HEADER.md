@@ -44,7 +44,7 @@ Static artist website (per README; actual source not yet in this repo). No build
 
 - Dev / preview: none defined (no source in repo). Once real site lands: serve statically (e.g. `npx serve .`); no build.
 - Build: none (static).
-- Deploy: Netlify (push = production deploy → gated by `APPROVE LIVE CHANGE`). ⚠️ Deploy linkage unverified — confirm the Netlify source before pushing.
+- Deploy: Netlify (push = production deploy → gated by clear, scoped confirmation from David). ⚠️ Deploy linkage unverified — confirm the Netlify source before pushing.
 - Lint/format: none defined.
 
 ## Locked Rules
@@ -53,7 +53,7 @@ Static artist website (per README; actual source not yet in this repo). No build
 - **Never publish prices** unless explicitly client-approved (LFNYC pricing doctrine).
 - Mobile-first, WCAG AA contrast, body text 16px+. Respect `prefers-reduced-motion`.
 - Images `.webp` + explicit `width`/`height` + lazy-load below fold.
-- `git push` = production deploy → **gated** by `APPROVE LIVE CHANGE`. `.env`/secrets never read.
+- `git push` = production deploy → **gated** by clear, scoped confirmation from David. `.env`/secrets never read.
 - **PLACEHOLDER:** this repo has no site source. Do not assume it is the deploy source; the real code lands from the `02_CLIENTS` iCloud folder later.
 - **Before the real site is pushed:** add a `/.ai/*`, `/CLAUDE.md`, `/AGENTS.md` → 404 exclusion (or a `/*.md → 404` rule) to the site's `netlify.toml` so internal AI-Ops docs are never served publicly.
 

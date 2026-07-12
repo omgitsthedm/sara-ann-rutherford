@@ -5,7 +5,7 @@
 ## Commands  (REQUIRED)
 - Dev/preview: none yet (placeholder repo, no source). Once real site lands: `npx serve .` — static, no build.
 - Build: none (static).
-- Deploy: Netlify (**push = production deploy** → needs `APPROVE LIVE CHANGE`). ⚠️ Deploy source unverified — confirm before pushing.
+- Deploy: Netlify (**push = production deploy** → needs clear, scoped confirmation from David). ⚠️ Deploy source unverified — confirm before pushing.
 - Lint/format: none defined.
 
 ## Client Info

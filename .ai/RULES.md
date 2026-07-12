@@ -5,7 +5,7 @@ Generated date/time: 2026-06-28T02:28:37-0700
 Source Base: /Users/davidmarsh/AI-OPS/TEMPLATES/RULES_BASE.md
 Source Header: /Users/davidmarsh/Desktop/LiFi NYC/Clients/Sara Ann Rutherford/sara-ann-rutherford/.ai/RULES_HEADER.md
 <!-- AI-OPS-GENERATED: edit RULES_HEADER.md or RULES_BASE.md, then rerun generate-rules. -->
-<!-- AI-OPS-CONTENT-CHECKSUM: 3166845392:9393 -->
+<!-- AI-OPS-CONTENT-CHECKSUM: 1843554719:9426 -->
 
 <!-- AI-OPS-CONTENT-BEGIN -->
 ## Project Rules Header
@@ -56,7 +56,7 @@ Static artist website (per README; actual source not yet in this repo). No build
 
 - Dev / preview: none defined (no source in repo). Once real site lands: serve statically (e.g. `npx serve .`); no build.
 - Build: none (static).
-- Deploy: Netlify (push = production deploy → gated by `APPROVE LIVE CHANGE`). ⚠️ Deploy linkage unverified — confirm the Netlify source before pushing.
+- Deploy: Netlify (push = production deploy → gated by clear, scoped confirmation from David). ⚠️ Deploy linkage unverified — confirm the Netlify source before pushing.
 - Lint/format: none defined.
 
 ## Locked Rules
@@ -65,7 +65,7 @@ Static artist website (per README; actual source not yet in this repo). No build
 - **Never publish prices** unless explicitly client-approved (LFNYC pricing doctrine).
 - Mobile-first, WCAG AA contrast, body text 16px+. Respect `prefers-reduced-motion`.
 - Images `.webp` + explicit `width`/`height` + lazy-load below fold.
-- `git push` = production deploy → **gated** by `APPROVE LIVE CHANGE`. `.env`/secrets never read.
+- `git push` = production deploy → **gated** by clear, scoped confirmation from David. `.env`/secrets never read.
 - **PLACEHOLDER:** this repo has no site source. Do not assume it is the deploy source; the real code lands from the `02_CLIENTS` iCloud folder later.
 - **Before the real site is pushed:** add a `/.ai/*`, `/CLAUDE.md`, `/AGENTS.md` → 404 exclusion (or a `/*.md → 404` rule) to the site's `netlify.toml` so internal AI-Ops docs are never served publicly.
 
@@ -89,7 +89,6 @@ Agents must recognize these exact commands:
 
 - `SESSION START`
 - `SESSION CLOSEOUT`
-- `APPROVE LIVE CHANGE`
 - `STOP`
 - `HALT`
 
@@ -148,9 +147,9 @@ In Emergency Mode:
 
 If a STOP or HALT conflicts with automation, human instruction wins.
 
-## APPROVE LIVE CHANGE Protocol
+## Live Change Confirmation Protocol
 
-`APPROVE LIVE CHANGE` is required before any live transactional action unless the action is sandboxed, staged, explicitly David-run, or already protected by a project-specific approved safe path.
+Clear scoped confirmation is required before any live transactional action unless the action is sandboxed, staged, explicitly David-run, or already protected by a project-specific approved safe path.
 
 Approval must be scoped to a specific action. It does not authorize unrelated live changes.
 
@@ -184,7 +183,7 @@ Documentation, generated rules, and state files still require visibility when th
 
 Observational production QA is allowed when it only reads public or authorized state and does not create, mutate, submit, send, buy, book, upload, export, or persist anything.
 
-Transactional production QA is not allowed unless sandboxed, staged, explicitly David-run, or gated by `APPROVE LIVE CHANGE` plus a safe test path.
+Transactional production QA is not allowed unless sandboxed, staged, explicitly David-run, or gated by clear, scoped confirmation from David plus a safe test path.
 
 If a `qa:prod` harness exists, run it instead of improvising checks.
 
@@ -214,9 +213,9 @@ Dangerous operations include:
 - running live transactional QA
 - changing production infrastructure
 
-The required approval phrase for live danger is `APPROVE LIVE CHANGE`.
+Live danger requires clear confirmation from David that identifies the intended production action and scope.
 
-No standing autonomy, Emergency Mode, or "do it all / don't ask" instruction elevates past this gate. Transactional production actions always require `APPROVE LIVE CHANGE`, scoped to the single action.
+Broad standing autonomy does not cover ambiguous or destructive production changes. Confirm the intended live action and scope in plain language before proceeding.
 
 ## Stale State Protocol
 

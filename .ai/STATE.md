@@ -49,7 +49,7 @@
 ## Do Not Touch
 
 - `.env`/secrets.
-- `git push` to `master` (= production deploy) without `APPROVE LIVE CHANGE`.
+- `git push` to `master` (= production deploy) without clear, scoped confirmation from David.
 - The Netlify deploy linkage / domain config (confirm before changing).
 
 ## Proposed Changes / Inbox
